@@ -1,10 +1,6 @@
-build_script:
-  - cmake -H. -B_builds
-  - cmake --build _builds
-
 test_script:
   - echo %CD%
-  - cd _builds
+  - ps: cd _builds
   - echo %CD%
   - ctest -VV
   - echo %CD%
