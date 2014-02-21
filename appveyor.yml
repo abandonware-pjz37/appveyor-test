@@ -1,3 +1,6 @@
+build_script:
+  - echo %CD%
+
 test_script:
   - echo %CD%
   - ps: cd _builds
