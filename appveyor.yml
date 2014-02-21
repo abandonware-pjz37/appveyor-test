@@ -3,5 +3,8 @@ build_script:
   - cmake --build _builds
 
 test_script:
+  - echo %CD%
   - cd _builds
+  - echo %CD%
   - ctest -VV
+  - echo %CD%
