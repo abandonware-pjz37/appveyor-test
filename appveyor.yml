@@ -1,7 +1,7 @@
 build_script:
-  - echo %APPVEYOR%
-  - echo %APPVEYOR_API_URL%
-  - echo %PATH%
+  - cmake -H. -B_builds
+  - cmake --build _builds
 
 test_script:
-  - where cmake
+  - cd _builds
+  - ctest -VV
