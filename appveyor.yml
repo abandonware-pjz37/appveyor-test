@@ -1,0 +1,4 @@
+test_script:
+  - echo %APPVEYOR%
+  - echo %APPVEYOR_API_URL%
+  - echo %PATH%
