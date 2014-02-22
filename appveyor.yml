@@ -1,15 +1,7 @@
 build_script:
-  - echo %CD%
-  - mkdir foo
-  - echo %CD%
-  - ps: cd foo
-  - echo %CD%
   - cmake -H. -B_builds
   - cmake --build _builds
 
 test_script:
-  - echo %CD%
   - ps: cd _builds
-  - echo %CD%
   - ctest -VV
-  - echo %CD%
