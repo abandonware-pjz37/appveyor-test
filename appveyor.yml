@@ -1,21 +1,21 @@
 environment:
   matrix:
     - GENERATOR: "Visual Studio 12"
-      TYPE: Debug
+      CONFIG: Debug
 
     - GENERATOR: "Visual Studio 12"
-      TYPE: Release
+      CONFIG: Release
 
     - GENERATOR: "Visual Studio 12 Win64"
-      TYPE: Debug
+      CONFIG: Debug
 
     - GENERATOR: "Visual Studio 12 Win64"
-      TYPE: Release
+      CONFIG: Release
 
 build_script:
-  - cmake "-G%GENERATOR%" "-DCMAKE_BUILD_TYPE=%TYPE%" -H. -B_builds
-  - cmake --build _builds
+  - cmake "-G%GENERATOR%" -H. -B_builds
+  - cmake --build _builds --config "%CONFIG%"
 
 test_script:
   - ps: cd _builds
-  - ctest -VV -C "%TYPE%"
+  - ctest -VV -C "%CONFIG%"
