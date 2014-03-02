@@ -3,6 +3,8 @@ install:
 
 build_script:
   - echo %PATH%
+  - ps: set PATH=%PATH%;C:\Python33\
+  - echo %PATH%
   - C:\Python33\python.exe --version
   - where python
 
