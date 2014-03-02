@@ -2,8 +2,9 @@ install:
   - ps: cinst python3
 
 build_script:
+  - echo %PATH%
   - C:\Python33\python.exe --version
-  - where python3
+  - where python
 
 test_script:
-  - python3 --version
+  - python --version
