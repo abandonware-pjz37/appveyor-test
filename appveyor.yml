@@ -1,3 +1,6 @@
+install:
+  - cinst python
+
 build_script:
   - where python
 
