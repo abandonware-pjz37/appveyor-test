@@ -1,5 +1,5 @@
 install:
-  - cinst python
+  - cinst python3
 
 build_script:
   - where python
