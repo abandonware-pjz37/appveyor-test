@@ -1,3 +1,3 @@
 appveyor-test
 =============
-* http://ci-beta.appveyor.com
+* http://appveyor.com
